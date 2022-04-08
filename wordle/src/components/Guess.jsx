@@ -3,14 +3,14 @@ import AddGuess from './AddGuess';
 import { useState } from 'react';
 
 const Guess = () => {
-	const [guesses, addGuess] = useState([]);
+  const [guesses, addGuess] = useState([]);
 
-	return (
-		<div>
-			<ShowGuesses guesses={guesses}></ShowGuesses>
-			<AddGuess addGuess={addGuess}></AddGuess>
-		</div>
-	);
+  return (
+    <div>
+      <ShowGuesses guesses={guesses}></ShowGuesses>
+      <AddGuess addGuess={addGuess}></AddGuess>
+    </div>
+  );
 };
 
 export default Guess;

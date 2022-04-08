@@ -1,3 +1,7 @@
+# Wordle Project Using React
+
+Project wireframe: https://excalidraw.com/#room=f2e5927f4bc3a990d5f3,Lp5dfxV6_RRs_Ub8a2Qisg
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

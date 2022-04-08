@@ -5,12 +5,12 @@ import Restart from './components/Restart';
 
 function App() {
   return (
-		<div>
-			<Header></Header>
-			<Guess></Guess>
-			<Restart></Restart>
-		</div>
-	);
+    <div>
+      <Header></Header>
+      <Guess></Guess>
+      <Restart></Restart>
+    </div>
+  );
 }
 
 export default App;
