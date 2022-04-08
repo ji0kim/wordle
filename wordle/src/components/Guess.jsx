@@ -3,12 +3,10 @@ import AddGuess from './AddGuess';
 import { useState } from 'react';
 
 const Guess = () => {
-  const [guesses, addGuess] = useState([]);
-  const answer = 'apple';
+	const [guesses, addGuess] = useState([]);
+	const answer = 'apple';
 
-
-
-  return (
+	return (
 		<div>
 			<ShowGuesses guesses={guesses}></ShowGuesses>
 			<AddGuess addGuess={addGuess} answer={answer}></AddGuess>

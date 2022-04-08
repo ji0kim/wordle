@@ -1,12 +1,23 @@
 import { useState } from 'react';
 
-const GuessesList = (props) => {
+const GuessesList = ({ guesses }) => {
+	console.log(guesses);
 	return (
-		<ul>
-			{props.guesses.map((guess) => {
-				return <li key={guess}>{guess}</li>;
-			})}
-		</ul>
+		<table>
+			<tbody>
+				{guesses.map(({ guess }, i) => {
+					return (
+						<tr key={guess[i]}>
+							<td>{guess[0][0]}</td>
+							<td>{guess[1][0]}</td>
+							<td>{guess[2][0]}</td>
+							<td>{guess[3][0]}</td>
+							<td>{guess[4][0]}</td>
+						</tr>
+					);
+				})}
+			</tbody>
+		</table>
 	);
 };
 

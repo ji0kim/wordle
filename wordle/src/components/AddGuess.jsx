@@ -7,34 +7,34 @@ const AddGuess = ({ addGuess, answer }) => {
 	const [total, setTotal] = useState(6);
 
 	const checkAnswer = (newGuessTry) => {
-		if (newGuessTry === answer) {
-			setErrMessage('You win!');
-		} else {
+		if (newGuessTry !== answer) {
 			const splitAnswer = answer.split('');
 			const splitAnswerSpliceable = answer.split('');
 			const splitNewGuessTry = newGuessTry.split('');
-			// {a:1}{p: 3}
 			const compare = splitNewGuessTry.map((char, i) => {
 				if (char === splitAnswer[i]) {
 					splitAnswerSpliceable.splice(splitAnswerSpliceable.indexOf(char), 1);
-					return 'matched';
+
+					return [char, 'matched'];
 				} else if (splitAnswerSpliceable.includes(char)) {
-					return 'included';
+					return [char, 'included'];
 				} else {
-					return 'notIncluded';
+					return [char, 'notIncluded'];
 				}
 			});
-
 			setTotal((total) => {
 				return --total;
 			});
+			return compare;
+		} else {
+			setErrMessage('You win!');
 		}
 	};
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		checkAnswer(newGuess);
+
 		addGuess((guessList) => {
-			return [...guessList, newGuess];
+			return [...guessList, { guess: checkAnswer(newGuess) }];
 		});
 		setNewGuess('');
 	};
