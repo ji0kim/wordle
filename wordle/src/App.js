@@ -5,12 +5,12 @@ import Restart from './components/Restart';
 
 function App() {
   return (
-    <div>
-      <Header></Header>
-      <Guess></Guess>
-      <Restart></Restart>
-    </div>
-  );
+		<section id="wordle-body">
+			<Header></Header>
+			<Guess></Guess>
+			<Restart></Restart>
+		</section>
+	);
 }
 
 export default App;
