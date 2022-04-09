@@ -1,3 +1,13 @@
 .App {
   text-align: center;
 }
+
+.included {
+  background-color: #C3AE54;
+}
+.not-included{
+  background-color: #74787A;
+}
+.matched {
+  background-color: #67A561;
+}

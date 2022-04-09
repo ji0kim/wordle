@@ -14,12 +14,11 @@ const AddGuess = ({ addGuess, answer }) => {
 			const compare = splitNewGuessTry.map((char, i) => {
 				if (char === splitAnswer[i]) {
 					splitAnswerSpliceable.splice(splitAnswerSpliceable.indexOf(char), 1);
-
 					return [char, 'matched'];
 				} else if (splitAnswerSpliceable.includes(char)) {
 					return [char, 'included'];
 				} else {
-					return [char, 'notIncluded'];
+					return [char, 'not-included'];
 				}
 			});
 			setTotal((total) => {
@@ -32,7 +31,6 @@ const AddGuess = ({ addGuess, answer }) => {
 	};
 	const handleSubmit = (event) => {
 		event.preventDefault();
-
 		addGuess((guessList) => {
 			return [...guessList, { guess: checkAnswer(newGuess) }];
 		});
@@ -41,7 +39,7 @@ const AddGuess = ({ addGuess, answer }) => {
 	const regex = /([a-z])/;
 
 	return (
-		<div>
+		<>
 			<form onSubmit={handleSubmit}>
 				<label htmlFor="new-guess">Guess</label>
 				<input
@@ -72,7 +70,7 @@ const AddGuess = ({ addGuess, answer }) => {
 				{errMessage}
 				{total + ' Guesses remaining'}
 			</p>
-		</div>
+		</>
 	);
 };
 
