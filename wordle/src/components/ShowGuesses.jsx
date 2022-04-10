@@ -1,9 +1,8 @@
 const GuessesList = ({ guesses }) => {
-	console.log(guesses);
 	return (
 		<table>
 			<tbody>
-				{guesses.map(({ guess }, i) => {
+				{guesses.map((guess, i) => {
 					return (
 						<tr key={guess[i]}>
 							<td className={guess[0][1]}>

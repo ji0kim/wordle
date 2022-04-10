@@ -32,7 +32,7 @@ const AddGuess = ({ addGuess, answer }) => {
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		addGuess((guessList) => {
-			return [...guessList, { guess: checkAnswer(newGuess) }];
+			return [...guessList, checkAnswer(newGuess)];
 		});
 		setNewGuess('');
 	};
@@ -41,7 +41,6 @@ const AddGuess = ({ addGuess, answer }) => {
 	return (
 		<>
 			<form onSubmit={handleSubmit}>
-				<label htmlFor="new-guess">Guess</label>
 				<input
 					id="new-guess"
 					name="newguess"
