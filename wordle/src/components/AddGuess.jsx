@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 const AddGuess = ({ setGuess, answer }) => {
 	const [newGuess, setNewGuess] = useState('');
-	// const [disable, setDisable] = useState(true);
 	const [errMessage, setErrMessage] = useState('');
 	const [total, setTotal] = useState(6);
 

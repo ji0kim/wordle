@@ -1,16 +1,18 @@
 import ShowGuesses from './ShowGuesses';
 import AddGuess from './AddGuess';
+import Restart from './Restart';
 import { useState } from 'react';
 
 const Guess = () => {
-	const [guesses, addGuess] = useState([]);
+	const [guesses, setGuess] = useState([]);
 	const answer = 'apple';
 
 	return (
-		<div>
+		<>
 			<ShowGuesses guesses={guesses}></ShowGuesses>
-			<AddGuess addGuess={addGuess} answer={answer}></AddGuess>
-		</div>
+			<AddGuess setGuess={setGuess} answer={answer}></AddGuess>
+			<Restart setGuess={setGuess}></Restart>
+		</>
 	);
 };
 
