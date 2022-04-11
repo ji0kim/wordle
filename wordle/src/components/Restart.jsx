@@ -1,5 +1,5 @@
-const Restart = () => {
-	return <button>Restart</button>;
+const Restart = ({ setGuess }) => {
+	return <button onClick={() => setGuess([])}>Restart</button>;
 };
 
 export default Restart;
