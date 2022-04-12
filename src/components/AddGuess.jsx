@@ -37,8 +37,8 @@ const AddGuess = ({ setGuess, answer }) => {
 	};
 
 	const isValidGuess = (event) => {
-		const regex = /([a-zA-Z])/;
-		const value = event.target.value.toUpperCase();
+		const regex = /([a-z])/;
+		const value = event.target.value;
 		const lastChar = value[value.length - 1];
 		if (regex.test(lastChar)) {
 			setNewGuess(value);
